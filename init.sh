@@ -10,6 +10,6 @@ wget https://raw.githubusercontent.com/liqul/test-vm-extension/main/monitor.py -
 
 # setup a cron job
 crontab -l > cron_bkp
-echo "* * * * * python3 /monitor/monitor.py >/dev/null 2>&1" >> cron_bkp
+echo "* * * * * python3 /monitor/monitor.py > /monitor/mon.log 2>&1" >> cron_bkp
 crontab cron_bkp
 rm cron_bkp
