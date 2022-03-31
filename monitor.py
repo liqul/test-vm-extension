@@ -3,6 +3,7 @@
 import json
 import socket
 import urllib.request
+import datetime 
 
 metadata_url = "http://169.254.169.254/metadata/scheduledevents?api-version=2020-07-01"
 this_host = socket.gethostname()
@@ -38,7 +39,7 @@ def handle_scheduled_events(data):
 
 def main():
     data = get_scheduled_events()
-    print(data)
+    print(datetime.datetime.now(), data)
     handle_scheduled_events(data)
 
 
