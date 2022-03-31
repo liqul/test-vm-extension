@@ -34,7 +34,7 @@ def handle_scheduled_events(data):
                 " by " + eventSource +
                 " with description " + description +
                 " not before " + notbefore)
-            # Add logic for handling events here
+            print("send msg to mq!!!!")
 
 
 def main():
